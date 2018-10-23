@@ -6,10 +6,10 @@ def sumNums(fileName):
     sum = 0
     for line in f:
         line = line.rstrip()
-        num = re.findall("[0-9]*", line)
+        num = re.findall("[0-9]+", line)
         for n in num:
-            if n != '':
-                sum += int(n)
+            sum += int(n)
+
     f.close()
     return sum
 
